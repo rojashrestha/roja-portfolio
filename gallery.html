@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roja Portfolio</title>
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="cover"></div>
+
+    <header>
+      <div class="left">
+        <h2>Roja Portfolio</h2>
+        <p class="subtitle">A Digital Journey Through Tech and Creativity</p>
+      </div>
+
+      <nav>
+        <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="content.html">Content</a>
+                <a href="journal.html">Journal</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            
+      </nav>
+
+     
+      <button id="toggle-theme" class="toggle-btn">
+        <i id="theme-icon" class="fas fa-sun"></i>
+      </button>
+    </header>
+
+
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const icon = document.getElementById("theme-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+    });
+  </script>
+</body>
+</html>

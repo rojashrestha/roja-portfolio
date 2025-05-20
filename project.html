@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roja Portfolio</title>
+
+ 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Link to your main CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="cover"></div>
+
+    <header>
+        <button id="toggle-theme" class="toggle-btn">
+        <i id="theme-icon" class="fas fa-sun"></i>
+      </button>
+    </header>
+    <main>
+         <div class="Project-Container">
+        <h1>My Projects</h1>
+        <p class="subtitle">These are some of the projects I've been working on,
+             showcasing my skills in various technologies and problem domains.</p>
+    <section id="poject1" class="project-first">
+      <h2 class="section-title">Sorting Analyzer</h2>
+      <p class="section-content"> Sorting Analyzer , first college group project</p>  
+    </section>
+
+    <section id="project2" class="project2">
+        <h2 class="section-title">Canva Creative Workshop</h2>
+        <p class="section-content">Non-technical college project</p>
+    </section>
+      </div>
+    </main>
+</div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const icon = document.getElementById("theme-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+    });
+  </script>
+</body>
+</html>
