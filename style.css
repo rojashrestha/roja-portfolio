@@ -1,14 +1,18 @@
- /*  <style>
-        /* Color Variables */
-        :root {
-            --primary: #9A4D55;    /* Deep rose */
-            --secondary: #B76E79;   /* Muted pink */
-            --accent: #E8C8CD;      /* Pale pink */
-            --dark: #3A2E2F;        /* Dark mauve */
-            --text: #F5E6E8;        /* Soft white-pink */
-        }
+/*:root {
+            --navy: #2F4156;
+            --teal: #0e0f10;
+            --beige: #F5EFEB;
+            --sky-blue: #C9D9E6;
+            --white: #FFFFFF;
+            
+            --primary: var(--navy);
+            --secondary: var(--teal);
+            --accent: var(--sky-blue);
+            --bg: var(--beige);
+            --text: var(--navy);
+        } */
 
-        /* Base Styles */
+        
         * {
             margin: 0;
             padding: 0;
@@ -18,6 +22,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--text);
+            background-color: var(--bg);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -41,7 +46,7 @@
         .cover {
             position: fixed;
             inset: 0;
-            background: linear-gradient(45deg, rgba(58, 46, 47, 0.9) 0%, rgba(154, 77, 85, 0.4) 100%);
+            background: linear-gradient(45deg, rgba(47, 65, 86, 0.1) 0%, rgba(86, 124, 141, 0.2) 100%);
         }
 
         /* Header Styles */
@@ -59,9 +64,9 @@
             font-size: 1.8rem;
             margin: 0;
             letter-spacing: 1px;
-            background: linear-gradient(45deg, var(--accent), var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: transparent
+           
+            
         }
 
         nav {
@@ -86,7 +91,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
+            background: var(--teal);
             transition: width 0.3s ease;
         }
 
@@ -94,7 +99,7 @@
             width: 100%;
         }
 
-        /* Main Content Sections */
+      
         main {
             padding: 4rem 5% 2rem;
             position: relative;
@@ -109,25 +114,25 @@
         }
 
         .section-card {
-            background: rgba(58, 46, 47, 0.7);
+            background: rgba(198, 222, 242, 0.3);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 2rem;
-            border: 1px solid var(--secondary);
+            border: 1px solid var(--sky-blue);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 2, 0.1);
         }
 
         .section-card:hover {
             transform: translateY(-5px);
-            background: rgba(58, 46, 47, 0.8);
+            background: rgba(192, 228, 250, 0.4);
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: var(--accent);
+            color: var(--teal);
         }
 
         .section-content {
@@ -145,7 +150,7 @@
         }
 
         .contact-link {
-            color: var(--accent);
+            color: var(--teal);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -156,6 +161,22 @@
         .contact-link:hover {
             opacity: 0.8;
             text-decoration: underline;
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            background-color: var(--teal);
+            color: var(--bg);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background-color: var(--navy);
         }
 
         /* Responsive Design */
@@ -198,4 +219,35 @@
                 height: auto;
             }
         }
-    </style> */
+
+body.dark-mode {
+  --primary: #f8f9fa;
+  --secondary: #f3f3f7;
+  --accent: #101010;
+  --bg: #080808;
+  --text: #f8f2f2;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+
+    </style>

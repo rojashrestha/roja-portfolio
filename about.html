@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roja Portfolio</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="cover"></div>
+
+    <header>
+      <div class="left">
+        <h2>Roja Portfolio</h2>
+        <p class="subtitle">A Digital Journey Through Tech and Creativity</p>
+      </div>
+
+      <nav>
+        <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="content.html">Content</a>
+                <a href="journal.html">Journal</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            
+      </nav>
+
+     
+      <button id="toggle-theme" class="toggle-btn">
+        <i id="theme-icon" class="fas fa-sun"></i>
+      </button>
+    </header>
+<body>
+    <section class = "about">
+        <div class = "about-container">
+            <img scr="roja.jpg" alt="roja's photo" class="profile picture" / >
+            <div class = "about-me">
+                <h1>About Me</h1>
+            <div class="inside-about-me">
+                <h2>Hello there ! I'm Roja Shrestha</h2>
+                <p>A little mysterious, a little lazy but deeply passionate about creativity and learning.
+I won’t brag about my skills or projects here, because honestly, I haven’t mastered anything yet. I like to keep things simple and raw—but with a touch of perfection.
+
+As a Computer Science student, I want to code. But truth be told, I don’t always enjoy it. Still, there's a part of me that dreams of building life-changing technology. Maybe God has different plans for me—but I’m here, exploring every possibility.
+
+I haven’t quite figured out what I truly love, but being creative feels like a part of me.
+Beyond tech, I’m deeply curious about astrology and people’s personalities you could call me nosy, or just genuinely concerned.
+
+This space is a reflection of me ; honest, evolving, and unfinished. Just like all of us. 🌙</p>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+  </div>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const icon = document.getElementById("theme-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+    });
+  </script>
+</body>
+</html>

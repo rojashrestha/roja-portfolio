@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosa's Dreambook</title>
+    <title>Roja Portfolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
- 
+    <link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
 </head>
 <body>
     <div class="container">
@@ -15,17 +20,24 @@
 
         <header>
             <div class="left">
-                <h2>Rosa's Dreambook</h2>
+                <h2>Roja Portfolio</h2>
                 <p class="subtitle">A Digital Journey Through Tech and Creativity</p>
             </div>
             <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#content">Content</a>
-                <a href="#skills">Skills</a>
-                <a href="#journal">Journal</a>
-                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="content.html">Content</a>
+                <a href="journal.html">Journal</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            
             </nav>
+
+
+<button id="toggle-theme" class="toggle-btn">
+  <i id="theme-icon" class="fas fa-sun"></i> 
+</button>
+
         </header>
 
         <main>
@@ -71,6 +83,7 @@
                         Thoughts, tech journey notes, beauty tips, and life experiences.
                     </p>
                 </section>
+                  
 
                 <!-- Contact Section -->
                 <section id="contact" class="section-card">
@@ -91,5 +104,24 @@
             </div>
         </main>
     </div>
+    <footer>
+        <p>© 2023 Roja Shrestha. All rights reserved.</p>
+    </footer>
+<script>
+  const toggleBtn = document.getElementById("toggle-theme");
+  const themeIcon = document.getElementById("theme-icon");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    
+    // Reverse the icon logic
+    if (document.body.classList.contains("dark-mode")) {
+      themeIcon.classList.replace("fa-sun", "fa-moon");
+    } else {
+      themeIcon.classList.replace("fa-moon", "fa-sun");
+    }
+  });
+</script>
+
 </body>
 </html>
